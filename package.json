@@ -1,0 +1,33 @@
+{
+  "name": "sliding-images",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^6.5.1",
+    "gsap": "^3.10.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^1.3.0",
+    "react-responsive": "^9.0.0-beta.10",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^5.3.5",
+    "transition-hook": "^1.5.2",
+    "zustand": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.26",
+    "@vitejs/plugin-react": "^2.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vite-tsconfig-paths": "^3.5.0"
+  }
+}
