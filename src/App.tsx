@@ -19,7 +19,7 @@ function App() {
         <title>Lenclume Hotel</title>
       </Helmet>
 
-      <AnimatePresence exitBeforeEnter={true}>
+      <AnimatePresence mode="wait">
         <Routes location={loc} key={loc.pathname}>
           <Route path="/" element={<RootContainer />}>
             <Route index element={<PageWrapper><ScrollToTop><Home /></ScrollToTop></PageWrapper>} />
