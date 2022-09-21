@@ -1,15 +1,39 @@
 import { AppRoutes } from 'config/AppRoutes'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import styled, { css } from 'styled-components'
+import gsap from 'gsap'
 
 const Home = () => {
+
+  const gsapRef = useRef<HTMLHeadingElement |null>(null);
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+
+    const timeline = gsap.timeline();
+
+
+    if(show) {
+      timeline.fromTo(
+        gsapRef.current,
+        { xPercent: -100, opacity: 0 },
+        { xPercent: 0, opacity: 1, ease: "power2" }
+      );
+    }
+
+  },[show])
+
+
   return (
     <Wrapper>
-      <h1>Home</h1>
+      <h1>Home Page</h1>
       <Link to={AppRoutes.about}>About</Link>
       <div>
-        <Button primary onClick={() => alert('Hello')}>Say Hello</Button>
+        <Button primary onClick={() => setShow(prev => !prev)}>Show GSAP</Button>
+        
+        {show && <h1 ref={gsapRef}>GSAP Heading Element</h1>}
+
       </div>
     </Wrapper>
   )

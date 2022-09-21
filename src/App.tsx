@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, Fragment } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import ScrollToTop from 'components/scroll-to-top/ScrollToTop';
@@ -14,9 +14,9 @@ function App() {
   const loc = useLocation()
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Helmet>
-        <title>Lenclume Hotel</title>
+        <title>React 18 Template</title>
       </Helmet>
 
       <AnimatePresence mode="wait">
@@ -27,7 +27,7 @@ function App() {
           </Route>
         </Routes>
       </AnimatePresence>
-    </React.Fragment>
+    </Fragment>
   )
 }
 
