@@ -8,4 +8,5 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+    # triggers the workflow every day at 11:30 and 23:30 UTC:
+    - cron:  '30 11,23 * * *'
