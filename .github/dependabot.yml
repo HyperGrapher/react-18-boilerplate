@@ -8,5 +8,10 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-    # triggers the workflow every day at 11:30 and 23:30 UTC:
-    - cron:  '30 11,23 * * *'
+      interval: "daily"
+      # Check for npm updates at 11am
+      time: "11:00"
+      timezone: "Turkey"
+    commit-message:
+      # Prefix all commit messages with "npm"
+      prefix: "npm-package"
