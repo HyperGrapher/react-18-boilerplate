@@ -16,7 +16,7 @@
     "react-helmet-async": "^2.0.4",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.22.3",
-    "styled-components": "^6.1.2",
+    "styled-components": "^6.1.9",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
